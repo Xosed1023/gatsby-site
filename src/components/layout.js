@@ -11,14 +11,14 @@ import {
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
+  query {
+    site {
+      siteMetadata {
+        title
       }
     }
-  `)
+  }
+`)
 
   return (
     <div className={container}>
@@ -33,6 +33,11 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
             </Link>
           </li>
         </ul>
